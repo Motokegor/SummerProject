@@ -21,7 +21,8 @@ export default function Register() {
   };
 
   const handleSignUpClick = () => {
-    navigate("/login");
+    // Симулируем успешную регистрацию 
+    navigate("/register-success"); 
   };
 
   return (
@@ -42,12 +43,12 @@ export default function Register() {
         </div>
       </div>
       <div className="register-box">
-        <button className={`register-box-btn ${isFormValid ? "active" : ""}`}>
-          Create
+        <button className={`register-box-btn ${isFormValid ? "active" : ""}`} onClick={handleSignUpClick}>
+        Create
         </button>
         <div className="register-box-text">
           <p>Already have an account?</p>
-          <a onClick={handleSignUpClick}>Log in</a>
+          <a onClick={() => navigate("/login")}>Log in</a>
         </div>
       </div>
     </div>

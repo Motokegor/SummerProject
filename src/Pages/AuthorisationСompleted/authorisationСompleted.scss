@@ -1,0 +1,16 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 219px;
+  align-items: center;
+  &-message {
+    width: 265px;
+    height: 117px;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 39.01px;
+    text-align: center;
+    color: #010101;
+  }
+}

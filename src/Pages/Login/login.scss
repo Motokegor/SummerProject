@@ -1,0 +1,87 @@
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.26px;
+    text-align: center;
+    color: #433823;
+    margin-top: 50px;
+  }
+  .authorisation-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.5px;
+    text-align: center;
+    color: #766b56;
+    margin-top: 12px;
+  }
+  .login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 265px;
+    &-btn {
+      width: 344px;
+      height: 56px;
+      background-color: #d7d9df;
+      color: #093f68;
+      border: 1px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.5px;
+      text-align: center;
+      &.active { 
+        background-color: #5E76A2;
+        color: white; 
+      }
+    }
+    &-restore{
+        display: flex;
+        margin-top: 30px;
+        gap: 5px;
+        p{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            text-align: center;
+            color: #a99e89;
+          }
+          a {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            text-align: center;
+            color: #5e76a2;
+            cursor: pointer;
+            text-decoration: underline;
+          }
+    
+    
+        }  
+        &-text {
+            display: flex;
+            margin-top: 5px;
+            gap: 5px;
+            p {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 21px;
+              text-align: center;
+              color: #a99e89;
+            }
+            a {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 21px;
+              text-align: center;
+              color: #5e76a2;
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+      
+      
+    }
+
+   

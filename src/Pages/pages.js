@@ -7,4 +7,5 @@ import StartPage from './StartPage/StartPage'
 import Register from './Register/Register'
 import Notes from './Notes/Notes'
 import DescriptionPage from './DescriptionPage/DescriptionPage'
-export default {Error, Home, Login,Tips,Statistic,StartPage,Register,Notes,DescriptionPage};
+import AuthorisationСompleted from './AuthorisationСompleted/AuthorisationСompleted.jsx';
+export default {Error, Home, Login,Tips,Statistic,StartPage,Register,Notes,DescriptionPage,AuthorisationСompleted};

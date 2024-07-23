@@ -1,0 +1,19 @@
+.continueBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    .btn{
+        width: 344px;
+        height: 56px;
+        background-color: #5E76A2;
+        color: white; 
+          border: 1px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.5px;
+        text-align: center;
+    
+    }
+}
