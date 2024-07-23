@@ -5,11 +5,14 @@ import "./styles/index.scss";
 import { BrowserRouter } from "react-router-dom";
 import firebaseConfig from "../firebaseConfig.js";
 import { initializeApp } from "firebase/app";
-initializeApp(firebaseConfig);
+
+const app = initializeApp(firebaseConfig);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
   </React.StrictMode>
 );
+

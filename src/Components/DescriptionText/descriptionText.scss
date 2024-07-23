@@ -1,0 +1,67 @@
+.hatching {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  margin: 103px auto 71px;
+}
+.information-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 393px;
+  height: 357px;
+  padding: 32px 24px 56px 24px;
+  border-radius: 32px 32px 0px 0px;
+  background-color: #f5f2ee;
+  &-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 29.26px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #24385e;
+    height: 58px;
+  }
+  .text {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #24385e;
+    margin-top: 24px;
+    height: 96px;
+  }
+  &-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 22px;
+    &-first-button {
+      width: 345px;
+      height: 56px;
+      background-color: #5e76a2;
+      color: white;
+      border: 1px;
+      border-radius: 15px;
+      cursor: pointer;
+      &.narrow {
+        width: 273px;
+      }
+    }
+    &-second-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 15px;
+      border: 1px;
+      background-color: rgba(94, 118, 162, 0.2);
+      margin-right: 16px;
+      cursor: pointer;
+    }
+  }
+}
