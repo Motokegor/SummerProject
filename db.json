@@ -1,0 +1,24 @@
+{
+    "texts": [
+      {
+        "h2": "Welcome to Intouch!",
+        "p": "Intouch is a powerful mobile app designed to track your baby's sleep time, monitor their environment, and get expert tips for their care"
+      },
+      {
+        "h2": "Consistency is key!",
+        "p": "Stick to a regular sleep schedule to promote healthy sleep habits for your baby"
+      },
+      {
+        "h2": "Stay in touch",
+        "p": "Stay informed about the environment at every moment you need it"
+      },
+      {
+        "h2": "Statistics",
+        "p": "Track your baby's sleep time, monitor their environment, and get statistics in convenient format"
+      },
+      {
+        "h2": "The ultimate baby care companion",
+        "p": "Ensure your baby's comfort and well-being with accurate sleep tracking, environmental monitoring, and personalized care advices"
+      }
+    ]
+  }

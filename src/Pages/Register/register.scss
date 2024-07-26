@@ -19,6 +19,10 @@ h2 {
   flex-direction: column;
   align-items: center;
   margin-top: 180px;
+
+  &.error {
+    margin-top: 155px;
+  }
   &-btn {
     width: 344px;
     height: 56px;
@@ -31,15 +35,17 @@ h2 {
     font-weight: 500;
     line-height: 19.5px;
     text-align: center;
-    &.active { 
-      background-color: #5E76A2;
-      color: white; 
+
+    &.active {
+      background-color: #5e76a2;
+      color: white;
     }
   }
   &-text {
     display: flex;
     margin-top: 50px;
     gap: 5px;
+
     p {
       font-size: 14px;
       font-weight: 500;
@@ -47,6 +53,7 @@ h2 {
       text-align: center;
       color: #a99e89;
     }
+
     a {
       font-size: 14px;
       font-weight: 500;
@@ -76,4 +83,14 @@ h2 {
     padding: 14px 0 14px 24px;
     border: 0;
   }
+  input.error {
+    border: 1px solid red;
+  }
+  input.error:focus {
+    outline: none;
+  }}
+.error-message {
+  display: flex;
+  flex-direction: row-reverse;
+  color: red;
 }

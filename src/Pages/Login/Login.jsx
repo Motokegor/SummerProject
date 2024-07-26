@@ -20,8 +20,9 @@ export default function Login() {
   };
 
   const handleLoginClick = () => {
-    // Симулируем успешный вход 
-    navigate("/login-success"); 
+    if (isFormValid) {
+      navigate("/login-success"); 
+    }
   };
 
   const handleSignUpClick = () => {
@@ -36,7 +37,7 @@ export default function Login() {
       <AuthorisationInput onInputChange={handleInputChange} />
       <div className="login-box">
         <button className={`login-box-btn ${isFormValid ? "active" : ""}`} onClick={handleLoginClick}>
-        Create
+          Log in
         </button>
         <div className="login-box-restore">
           <p>Forget password?</p>
