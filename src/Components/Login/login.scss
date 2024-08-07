@@ -35,32 +35,9 @@ h2 {
         color: white; 
       }
     }
-    &-restore{
-        display: flex;
-        margin-top: 30px;
-        gap: 5px;
-        p{
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 21px;
-            text-align: center;
-            color: #a99e89;
-          }
-          a {
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 21px;
-            text-align: center;
-            color: #5e76a2;
-            cursor: pointer;
-            text-decoration: underline;
-          }
-    
-    
-        }  
         &-text {
             display: flex;
-            margin-top: 5px;
+            margin-top: 50px;
             gap: 5px;
             p {
               font-size: 14px;

@@ -35,10 +35,6 @@ export default function Login() {
       <p className="authorisation-text">Log in with your Email</p>
       <Form handleClick={handleLogin} />
       <div className="login-box">
-        <div className="login-box-restore">
-          <p>Forget password?</p>
-          <a>Restore</a>
-        </div>
         <div className="login-box-text">
           <p>Don’t have an account?</p>
           <a onClick={handleSignUpClick}>Sign up</a>
