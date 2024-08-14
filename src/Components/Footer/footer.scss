@@ -2,12 +2,19 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: absolute;
   background-color: #f5f2ee;
   width: 393px;
   height: 83px;
+  top: 722px;
   img {
     width: 24px;
     height: 24px;
     cursor: pointer;
+    transition: filter 0.2s ease-in-out; 
+  }
+
+  .hovered { 
+    filter: brightness(0.5) drop-shadow(0 0 5px ); 
   }
 }

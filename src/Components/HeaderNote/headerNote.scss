@@ -1,0 +1,27 @@
+.headerNote {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 393px;
+  position: relative;
+  margin-top: 0;
+  background-color: #f5f2ee;
+  height: 56px;
+  &-title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: #5c513c;
+    text-transform: uppercase;
+    flex-grow: 1;
+  }
+  &-icon {
+    position: absolute;
+    padding: 6px 24px 5px 0;
+  }
+  &-back {
+    position: absolute;
+    padding: 20px 348px 20px 24px;
+  }
+}

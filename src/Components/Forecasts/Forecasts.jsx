@@ -1,45 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./forecasts.scss";
 import Temperature from "../../img/temperature.png";
 import Water from "../../img/icon_water.png";
 import Noise from "../../img/noise.png";
 import CircumSun from "../../img/circum_sun.png";
-
-import axios from "axios";
+import { useForecasts } from "../../Services/forecast.js";
 
 export default function Forecasts() {
-  const [forecasts, setForecasts] = useState({
-    temperature: null,
-    humidity: null,
-    noise: null,
-    illumination: null,
-  });
-
-  useEffect(() => {
-    const fetchForecasts = async () => {
-      try {
-        const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=53.9023&lon=27.5619&appid=2f75f517bfdffc42715c8046156a5da0`
-        );
-
-        const roundedTemperature = (response.data.main.temp - 273.15).toFixed(
-          0
-        );
-
-        setForecasts({
-          temperature: roundedTemperature,
-          humidity: response.data.main.humidity,
-          noise: null,
-          illumination: null,
-        });
-        console.log("Ответ от API:", response.data);
-      } catch (error) {
-        console.error("Ошибка при получении прогноза:", error);
-      }
-    };
-
-    fetchForecasts();
-  }, []);
+  const { forecasts } = useForecasts(); 
 
   return (
     <div className="forecasts-container">
@@ -75,7 +43,7 @@ export default function Forecasts() {
           </div>
           <div className="vertical-line"></div>
           <p className="forecasts-box-text">
-            {forecasts.noise ? forecasts.noise : "---"}
+            {forecasts.noise ? forecasts.noise : "---"}/10
           </p>
         </div>
         <div className="forecasts-box">
@@ -85,7 +53,7 @@ export default function Forecasts() {
           </div>
           <div className="vertical-line"></div>
           <p className="forecasts-box-text">
-            {forecasts.illumination ? forecasts.illumination : "---"}
+            {forecasts.illumination ? forecasts.illumination : "---"}/10
           </p>
         </div>
       </div>

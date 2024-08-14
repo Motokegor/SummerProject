@@ -5,6 +5,7 @@ import "./styles/index.scss";
 import { BrowserRouter } from "react-router-dom";
 import firebaseConfig from "../firebaseConfig.js";
 import { initializeApp } from "firebase/app";
+import 'firebase/firestore';
 import { Provider } from "react-redux";
 import { store } from "./store/index.js";
 

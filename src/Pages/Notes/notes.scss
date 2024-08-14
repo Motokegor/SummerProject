@@ -1,0 +1,72 @@
+.notes-app {
+    height: 90vh;
+  font-family: "Montserrat", sans-serif;
+  
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0 24px;
+    &-icons {
+      display: flex;
+      gap: 24px;
+    }
+    .header-action {
+      display: flex;
+      align-items: center;
+      color: #5e76a2;
+      cursor: pointer;
+  
+      &-img {
+        margin-left: 5px;
+        font-size: 16px;
+        color: #5e76a2;
+      }
+    }
+  }
+  
+  .notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 34px;
+    .note {
+      width: 345px;
+      height: 88px;
+      background-color: #e5e9f0;
+      padding: 12px 16px 8px 16px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      &-title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #433823;
+      }
+  
+      &-content {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #433823;
+      }
+  
+      &-date {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #43382380;
+      }
+    }
+  }
+  
+  .add-note {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+}

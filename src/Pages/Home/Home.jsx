@@ -8,8 +8,10 @@ import Ellipse from "../../img/ellipse.png";
 export default function Home() {
   const [isSleeping, setIsSleeping] = useState(false);
   const [sleepStartTime, setSleepStartTime] = useState(null);
-  const [sleepDurationHours, setSleepDurationHours] = useState(0);
-  const [sleepDurationMinutes, setSleepDurationMinutes] = useState(0);
+  const [sleepDurationHours, setSleepDurationHours] = useState(0); 
+  const [sleepDurationMinutes, setSleepDurationMinutes] = useState(0); 
+  const [targetSleepDurationHours, setTargetSleepDurationHours] = useState(0); 
+  const [targetSleepDurationMinutes, setTargetSleepDurationMinutes] = useState(0); 
   const [lastSleepDurationHours, setLastSleepDurationHours] = useState(0);
   const [lastSleepDurationMinutes, setLastSleepDurationMinutes] = useState(0);
   const [lastSleepEndTime, setLastSleepEndTime] = useState(null); 
@@ -41,14 +43,20 @@ export default function Home() {
   const handleSleepToggle = () => {
     setIsSleeping(!isSleeping);
     if (isSleeping) {
+      setSleepStartTime(new Date());
+    } else {
+      setTargetSleepDurationHours(sleepDurationHours);
+      setTargetSleepDurationMinutes(sleepDurationMinutes);
       setSleepStartTime(null);
       setSleepDurationHours(0);
       setSleepDurationMinutes(0);
-    } else {
-      setSleepStartTime(new Date());
     }
   };
 
+  const formattedTargetSleepDuration = 
+    `${targetSleepDurationHours.toString().padStart(2, '0')} h ${targetSleepDurationMinutes.toString().padStart(2, '0')} min`;
+  const formattedSleepDuration = 
+    `${sleepDurationHours.toString().padStart(2, '0')} h ${sleepDurationMinutes.toString().padStart(2, '0')} min`;
 
   return (
     <div>
@@ -67,12 +75,12 @@ export default function Home() {
         <div className="sleeping">
           <p className="sleeping-text">target sleeping</p>
           <p className="sleeping-time">
-            {isSleeping ? `${sleepDurationHours} h ${sleepDurationMinutes} min` : "0 h 0 min"}
+            {formattedTargetSleepDuration} 
           </p> 
         </div>
         <div className="sleeping">
           <p className="sleeping-text">last sleeping</p>
-          <p className="sleeping-time">0h ago</p>
+          <p className="sleeping-time">0 h ago</p>
         </div>
       </div>
       <Forecasts />
