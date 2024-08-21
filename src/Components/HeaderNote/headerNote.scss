@@ -1,4 +1,5 @@
 .headerNote {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
@@ -23,5 +24,6 @@
   &-back {
     position: absolute;
     padding: 20px 348px 20px 24px;
+    cursor: pointer;
   }
 }

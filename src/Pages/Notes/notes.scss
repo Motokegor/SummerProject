@@ -1,8 +1,8 @@
 .notes-app {
-    height: 90vh;
+  height: 90vh;
   font-family: "Montserrat", sans-serif;
-  
-.header-actions {
+
+  .header-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +17,7 @@
       align-items: center;
       color: #5e76a2;
       cursor: pointer;
-  
+
       &-img {
         margin-left: 5px;
         font-size: 16px;
@@ -25,7 +25,7 @@
       }
     }
   }
-  
+
   .notes {
     display: flex;
     flex-direction: column;
@@ -43,30 +43,38 @@
         font-size: 18px;
         font-weight: 500;
         line-height: 22px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         color: #433823;
       }
-  
+
       &-content {
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
         color: #433823;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
-  
+
       &-date {
         font-size: 12px;
         font-weight: 400;
         line-height: 22px;
         color: #43382380;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }
-  
+
   .add-note {
     position: fixed;
     bottom: 100px;
     right: 20px;
     cursor: pointer;
   }
-  
 }

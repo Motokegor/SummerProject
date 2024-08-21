@@ -7,15 +7,23 @@ import IconexSecond from "../../img/iconex-second.png";
 import Add from "../../img/add.png";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer.jsx";
+import { getFirestore, collection, getDocs, onSnapshot } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import firebaseConfig from '../../../firebaseConfig.js'; 
 
-export default function Notes({ notes, setNotes }) {
+export default function Notes() { 
+  const [notes, setNotes] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/db.json")
-      .then((response) => response.json())
-      .then((data) => setNotes(data.notes))
-      .catch((error) => console.error("Ошибка загрузки данных:", error));
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const unsubscribe = onSnapshot(collection(db, "notes"), (snapshot) => {
+      setNotes(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    });
+
+    return () => unsubscribe();
   }, []);
 
   const addNote = () => {
@@ -44,13 +52,13 @@ export default function Notes({ notes, setNotes }) {
         <div className="notes">
           {notes.map((note, index) => (
             <div
-              key={index}
+              key={note.id} 
               className="note"
-              onClick={() => navigate(`/notes/write/${index}`)} 
+              onClick={() => navigate(`/notes/write/${note.id}`)}
             >
-              <div className="note-title">{note.title}</div>
-              <div className="note-content">{note.content}</div>
-              <div className="note-date">{note.date}</div>
+              <p className="note-title">{note.title}</p> 
+              <p className="note-content">{note.content}</p> 
+              <p className="note-date">{note.date}</p> 
             </div>
           ))}
         </div>
