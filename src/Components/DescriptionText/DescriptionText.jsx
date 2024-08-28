@@ -5,7 +5,6 @@ import baby  from '../../img/babyMoses.png';
 import group from '../../img/Group.png';
 import data from '../../img/data-analytics.png';
 import picture from '../../img/picture.png';
-
 import './descriptionText.scss';
 
 export default function DescriptionText( props ) { 

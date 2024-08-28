@@ -6,14 +6,23 @@
   line-height: 22px;
   text-align: center;
   color: #433823;
-  margin-top: 104px;
+  margin-top: 26%;
 }
 .startImg {
   display: flex;
   justify-content: center;
-  width: 250px;
-  height: 250px;
+  width: 64%;
+  height: 64%;
   margin: 56px auto;
+  @media (min-height:895px) {
+    margin: 90px auto;
+  }
+  @media (min-height:843px) {
+    margin: 80px auto;
+  }
+  @media (min-height:931px) {
+    margin: 90px auto;
+  }
 }
 .input-selection {
   display: flex;
@@ -41,4 +50,15 @@
     text-align: center;
     cursor: pointer;
   }
+}
+@media (max-height:750px) {
+  .title-start {
+    margin-top: 15%;
+  }
+  .startImg {
+    width: 54%;
+    height: 54%;
+    margin: 46px auto;
+  }
+  
 }

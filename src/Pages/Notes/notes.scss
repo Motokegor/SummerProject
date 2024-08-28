@@ -1,12 +1,22 @@
 .notes-app {
   height: 90vh;
-  font-family: "Montserrat", sans-serif;
-
+  @media (max-height: 668px) {
+    height: 85vh;
+  }
+  @media (height: 896px) {
+    height: 88.8vh;
+  }
+  @media (height: 844px) {
+    height: 88.1vh;
+  }
+  @media (height: 932px) {
+    height: 89.3vh;
+  }
   .header-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 0 24px;
     &-icons {
       display: flex;
@@ -30,7 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 34px;
+    margin-top: 28px;
     .note {
       width: 345px;
       height: 88px;
@@ -73,8 +83,12 @@
 
   .add-note {
     position: fixed;
-    bottom: 100px;
-    right: 20px;
+    bottom: 15%;
+    right: 6%;
     cursor: pointer;
+    @media (min-height: 844px) {
+      bottom: 12%;
+    }
+    
   }
 }

@@ -1,8 +1,24 @@
 .forecasts-container {
-  margin-top: 35px;
+  margin-top: 25px;
   gap: 8px;
   display: flex;
   flex-direction: column;
+  @media (max-height:700px) {
+    margin-top: 20px;
+  }
+  @media (max-height:668px) {
+    margin-top: 12px;
+  }
+  @media (min-height:668px) {
+    margin-top: 40px;
+    gap: 25px;
+  }
+ @media (height:844px) {
+  gap: 15px;
+ }
+ @media (height:932px) {
+  gap: 25px;
+ }
   .forecasts-boxs {
     display: flex;
     justify-content: space-evenly;
@@ -14,6 +30,11 @@
       height: 72px;
       border-radius: 15px;
       background-color: #f9f8f5;
+      @media (max-height:700px) {
+        width: 158px;
+        height: 62px;
+        }
+
       &-title {
         display: flex;
         flex-direction: column;
@@ -21,7 +42,6 @@
         justify-content: center;
         width: 82px;
         p {
-          font-family: "Montserrat", sans-serif;
           font-size: 10px;
           font-weight: 400;
           line-height: 16px;
@@ -38,7 +58,6 @@
         display: inline-block;
       }
       &-text {
-        font-family: "Montserrat", sans-serif;
         font-size: 24px;
         font-weight: 700;
         line-height: 32px;
@@ -46,6 +65,10 @@
         text-align: center;
         color: #5E76A2;
         width: 50px;
+        @media (max-height:700px) {
+          font-size: 20px;
+        }
+  
       }
     }
   }

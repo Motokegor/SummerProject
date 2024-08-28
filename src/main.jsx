@@ -8,8 +8,8 @@ import { initializeApp } from "firebase/app";
 import 'firebase/firestore';
 import { Provider } from "react-redux";
 import { store } from "./store/index.js";
-
 const app = initializeApp(firebaseConfig);
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -4,6 +4,10 @@
   justify-content: center;
   margin-top: 219px;
   align-items: center;
+  @media (min-height: 843px) {
+    margin-top: 280px;
+  }
+ 
   &-message {
     width: 265px;
     height: 117px;
@@ -12,5 +16,8 @@
     line-height: 39.01px;
     text-align: center;
     color: #010101;
+  }
+  h2 {
+    margin-top: 0;
   }
 }

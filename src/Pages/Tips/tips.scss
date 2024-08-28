@@ -1,0 +1,47 @@
+.tips-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 16px;
+  gap: 24px;
+  overflow-y: auto;
+  @media (height:667px) {
+    height: 74.2vh;
+  }
+  @media (height:896px) {
+    height: 80.8vh;
+  }
+  @media (height:844px) {
+    height: 79.6vh;
+  }
+  @media (height:932px) {
+    height: 81.5vh;
+  }
+  .tip-box {
+    background-color: #f5f2ee;
+    border-radius: 15px;
+    height: 226px;
+    text-decoration: none;
+    cursor: pointer;
+    &-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin: 14px;
+      color: #433823;
+      &-title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      &-text {
+        width: 313px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+}

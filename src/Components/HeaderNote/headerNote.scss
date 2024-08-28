@@ -1,9 +1,8 @@
 .headerNote {
-  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  width: 393px;
+  width: 100%;
   position: relative;
   margin-top: 0;
   background-color: #f5f2ee;
@@ -23,7 +22,7 @@
   }
   &-back {
     position: absolute;
-    padding: 20px 348px 20px 24px;
+    padding: 20px 88% 20px 24px;
     cursor: pointer;
   }
 }

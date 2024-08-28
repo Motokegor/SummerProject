@@ -21,8 +21,43 @@
         "p": "Ensure your baby's comfort and well-being with accurate sleep tracking, environmental monitoring, and personalized care advices"
       }
     ],
-    "notes": [
-      
-    ]
+    "tips":[
+      {
+          "image": "/src/img/TipFirst.png",
+          "title": "Healthy Diet",
+          "description": "Advice description Advice description Advice description Advice description Advice description",
+          "information": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to"
+      },
+      {
+          "image": "/src/img/TipSecond.png",
+          "title": "Breakfast Ideas",
+          "description": "Advice description Advice description Advice description Advice description Advice description",
+          "information": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to"
+      },
+      {
+        "image": "/src/img/TipThird.png",
+        "title": "Advice title",
+        "description": "Advice description Advice description Advice description Advice description Advice description",
+        "information": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to"
+    },
+    {
+      "image": "/src/img/TipFourth.png",
+      "title": "Influence of gadgets",
+      "description": "Advice description Advice description Advice description Advice description Advice description",
+      "information": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to"
+    },
+    {
+      "image": "/src/img/TipFifth.png",
+      "title": "Advice title",
+      "description": "Advice description Advice description Advice description Advice description Advice description",
+      "information": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to"
+    },
+    {
+      "image": "/src/img/TipSixth.png",
+      "title": "Advice title",
+      "description": "Advice description Advice description Advice description Advice description Advice description",
+      "information": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to"
+    }
+  ]
   }
   

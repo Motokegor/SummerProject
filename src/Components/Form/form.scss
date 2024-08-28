@@ -4,6 +4,12 @@
   align-items: center;
   gap: 12px;
   margin-top: 60px;
+
+  @media (min-height: 843px) {
+    margin-top: 100px;
+    gap: 15px;
+  }
+
   p {
     font-size: 14px;
     font-weight: 400;
@@ -61,10 +67,11 @@
   }
   input.error:focus {
     outline: none;
-  }}
+  }
+}
 .error-message {
-  display: flex;
-  flex-direction: row-reverse;
+  position: absolute;
+  left: 62%;
   color: red;
 }
 .register-box-btn {
@@ -81,11 +88,23 @@
   line-height: 19.5px;
   text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
+  @media (max-height: 897px) {
+    margin-top: 340px;
+  }
+  @media (max-height: 845px) {
+    margin-top: 280px;
+  }
+  
 }
 .register-box-btn:hover {
-  background-color: #5E76A2; 
+  background-color: #5e76a2;
   color: white;
 }
 .error {
-  border: 2px solid red; 
+  border: 2px solid red;
+}
+@media (max-height: 680px) {
+  .register-box-btn {
+    margin-top: 150px;
+  }
 }

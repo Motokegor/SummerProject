@@ -1,16 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import pages from '../Pages/pages';
+import Preloader from '../Components/Preloader/Preloader.jsx'; 
 import './App.scss';
 
 function App() {
   return (
     <>
+    <Preloader />
       <Routes>
         <Route path='/home' element={<pages.Home/>}/>
         <Route path='/login' element={<pages.Login/>}/>
         <Route path='*' element={<pages.Error/>}/>
         <Route path='/tips' element={<pages.Tips/>}/>
+        <Route path='/tips/:id' element={<pages.TipsInfo/>}/> 
         <Route path='/statistic' element={<pages.Statistic/>}/>
         <Route path='/startPage' element={<pages.StartPage/>}/>
         <Route path='/register' element={<pages.Register/>}/>

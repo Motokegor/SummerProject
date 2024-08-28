@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./form.scss"; 
 
-export default function Form({ handleClick, emailError, passwordError }) { 
+export default function Form({ handleClick, loginError }) { 
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
@@ -15,9 +15,9 @@ export default function Form({ handleClick, emailError, passwordError }) {
           placeholder="user@gmail.com"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
-          className={emailError ? 'error' : ''} 
+          className={loginError === "auth/invalid-email" ? 'error' : ''} 
         />
-        {emailError && <p className="error-message">Email already in use!</p>} 
+        {loginError === "auth/invalid-email" && <p className="error-message">Invalid email format.</p>} 
       </div>
       <div>
         <p>Password</p>
@@ -27,15 +27,15 @@ export default function Form({ handleClick, emailError, passwordError }) {
           placeholder="Password"
           onChange={(e) => setPass(e.target.value)}
           value={pass}
-          className={passwordError ? 'error' : ''} 
+          className={loginError === "auth/wrong-password" ? 'error' : ''} 
         />
-        {passwordError && <p className="error-message">Password must be at least 6 characters long!</p>} 
+        {loginError === "auth/wrong-password" && <p className="error-message">Incorrect password.</p>} 
       </div>
       <button
         className="register-box-btn"
         onClick={() => handleClick(email, pass)}
       >
-        Create
+        Log in
       </button>
     </div>
   );

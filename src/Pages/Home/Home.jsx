@@ -8,55 +8,44 @@ import Ellipse from "../../img/ellipse.png";
 export default function Home() {
   const [isSleeping, setIsSleeping] = useState(false);
   const [sleepStartTime, setSleepStartTime] = useState(null);
-  const [sleepDurationHours, setSleepDurationHours] = useState(0); 
-  const [sleepDurationMinutes, setSleepDurationMinutes] = useState(0); 
-  const [targetSleepDurationHours, setTargetSleepDurationHours] = useState(0); 
-  const [targetSleepDurationMinutes, setTargetSleepDurationMinutes] = useState(0); 
-  const [lastSleepDurationHours, setLastSleepDurationHours] = useState(0);
-  const [lastSleepDurationMinutes, setLastSleepDurationMinutes] = useState(0);
-  const [lastSleepEndTime, setLastSleepEndTime] = useState(null); 
+  const [sleepEndTime, setSleepEndTime] = useState(null);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [totalSleepTime, setTotalSleepTime] = useState(0);
+
+  const formattedEndTime = sleepEndTime
+    ? new Date(sleepEndTime).toLocaleTimeString()
+    : "";
 
   useEffect(() => {
-    let interval = null;
+    let intervalId = null;
 
-    if (isSleeping && sleepStartTime) {
-      interval = setInterval(() => {
-        const now = new Date();
-        const diff = now - sleepStartTime;
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        setSleepDurationHours(hours);
-        setSleepDurationMinutes(minutes);
+    if (isSleeping) {
+      setSleepStartTime(new Date());
+      intervalId = setInterval(() => {
+        setElapsedTime((prevTime) => prevTime + 1000);
       }, 1000);
     } else {
-      clearInterval(interval);
       if (sleepStartTime) {
-        setLastSleepEndTime(new Date());
-        setLastSleepDurationHours(sleepDurationHours);
-        setLastSleepDurationMinutes(sleepDurationMinutes);
+        setSleepEndTime(new Date());
+        setTotalSleepTime((prevTime) => prevTime + elapsedTime);
       }
+      clearInterval(intervalId);
+      setElapsedTime(0);
     }
 
-    return () => clearInterval(interval);
-  }, [isSleeping, sleepStartTime]);
+    return () => clearInterval(intervalId);
+  }, [isSleeping]);
 
   const handleSleepToggle = () => {
     setIsSleeping(!isSleeping);
-    if (isSleeping) {
-      setSleepStartTime(new Date());
-    } else {
-      setTargetSleepDurationHours(sleepDurationHours);
-      setTargetSleepDurationMinutes(sleepDurationMinutes);
-      setSleepStartTime(null);
-      setSleepDurationHours(0);
-      setSleepDurationMinutes(0);
-    }
   };
 
-  const formattedTargetSleepDuration = 
-    `${targetSleepDurationHours.toString().padStart(2, '0')} h ${targetSleepDurationMinutes.toString().padStart(2, '0')} min`;
-  const formattedSleepDuration = 
-    `${sleepDurationHours.toString().padStart(2, '0')} h ${sleepDurationMinutes.toString().padStart(2, '0')} min`;
+  const sleepHours = Math.floor(totalSleepTime / (1000 * 60 * 60));
+  const sleepMinutes = Math.floor(
+    (totalSleepTime % (1000 * 60 * 60)) / (1000 * 60)
+  );
+  const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+  const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
 
   return (
     <div>
@@ -65,8 +54,8 @@ export default function Home() {
         <img src={Ellipse} alt="Ellipse" className="ellipse" />
         <div className="time-container">
           <div className="time-container-title">
-            <div className="hours">{sleepDurationHours.toString().padStart(2, '0')}</div>
-            <div className="minutes">{sleepDurationMinutes.toString().padStart(2, '0')}</div>
+            <div className="hours">{hours.toString().padStart(2, "0")}</div>
+            <div className="minutes">{minutes.toString().padStart(2, "0")}</div>
           </div>
           <div className="time-container-text">sleep for the last day</div>
         </div>
@@ -75,12 +64,13 @@ export default function Home() {
         <div className="sleeping">
           <p className="sleeping-text">target sleeping</p>
           <p className="sleeping-time">
-            {formattedTargetSleepDuration} 
-          </p> 
+            {sleepHours.toString().padStart(2, "0")}:
+            {sleepMinutes.toString().padStart(2, "0")}
+          </p>
         </div>
         <div className="sleeping">
           <p className="sleeping-text">last sleeping</p>
-          <p className="sleeping-time">0 h ago</p>
+          <p className="sleeping-time">{formattedEndTime}</p>
         </div>
       </div>
       <Forecasts />
@@ -95,7 +85,7 @@ export default function Home() {
           onChange={handleSleepToggle}
         />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
